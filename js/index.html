@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <td>
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <div>
+                    <label>Nombre Completo</label>
+                    <label class="validation-error hide" id="nombreCompletoValidationError">Este campo es requerido.</label>
+                    <input type="text" name="nombreCompleto" id="nombreCompleto"> <!-- Caja para ingresar el nombre -->
+                </div>
+                <div>
+                    <label>Numero Empleado</label>
+                    <input type="text" name="numeroEmpleado" id="numeroEmpleado"> <!-- caja para ingresar el id del empleado -->
+                </div>
+                <div>
+                    <label>Sueldo</label>
+                    <input type="text" name="sueldo" id="sueldo"> <!-- caja para ingresar el sueldo del empleado -->
+                </div>
+                <div>
+                    <label>Comuna</label>
+                    <input type="text" class="comuna" id="comuna"> <!-- caja para ingresar la comuna del empleado -->
+                </div>
+                <div class="form-action-buttons">
+                    <input type="submit" value="Ingresar">
+                </div>
+            </form>
+        </td>
+        <td>
+            <table class="list" id="empleadoList">
+                <thead>
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <th>Numero Empleado</th>
+                        <th>Sueldo</th>
+                        <th>Comuna</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </td>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
